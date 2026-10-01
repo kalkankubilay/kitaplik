@@ -1,0 +1,433 @@
+<!DOCTYPE html><html class="" lang="tr" data-stitch-anim-opacity="true" style="opacity: 0;"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Kitaplığım - Okuma Takibi</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS with Forms and Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-container": "#e2e2ec",
+            "surface-variant": "#22242a",
+            "on-tertiary-fixed-variant": "#653e00",
+            "on-primary": "#ffffff",
+            "tertiary-fixed": "#ffddb8",
+            "on-surface-variant": "#9ca3af",
+            "on-secondary-container": "#ffffff",
+            "background": "#0b0c10",
+            "inverse-primary": "#11131a",
+            "on-error": "#690005",
+            "on-surface": "#ffffff",
+            "secondary-fixed": "#282a30",
+            "surface-container-highest": "#24262d",
+            "tertiary": "#f59e0b",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed": "#ffffff",
+            "primary-fixed": "#ffffff",
+            "surface-bright": "#22242b",
+            "surface-container-lowest": "#06070a",
+            "primary-fixed-dim": "#cccccc",
+            "primary": "#ffffff",
+            "error": "#ffb4ab",
+            "tertiary-container": "#ca8100",
+            "primary-container": "#181a20",
+            "on-tertiary-fixed": "#2a1700",
+            "surface-tint": "#ffffff",
+            "error-container": "#93000a",
+            "on-error-container": "#ffdad6",
+            "tertiary-fixed-dim": "#ffb95f",
+            "secondary-container": "#1e2026",
+            "surface-container-low": "#111318",
+            "surface": "#0b0c10",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed-variant": "#9ca3af",
+            "outline": "#6b7280",
+            "on-background": "#ffffff",
+            "surface-dim": "#0b0c10",
+            "on-tertiary-container": "#3e2400",
+            "on-primary-fixed": "#000000",
+            "secondary": "#ffffff",
+            "secondary-fixed-dim": "#cccccc",
+            "inverse-surface": "#ffffff",
+            "surface-container": "#15171e",
+            "surface-container-high": "#1b1d25",
+            "inverse-on-surface": "#111318",
+            "outline-variant": "#2d3039",
+            "on-primary-fixed-variant": "#474646"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1.5rem",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "margin-mobile": "1.25rem",
+            "gutter-mobile": "0.75rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.025em", "fontWeight": "800" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Custom scrollbar suppression for horizontal pill bar */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-[#fbfbfb] text-[#111111] min-h-screen antialiased selection:bg-black selection:text-white pb-28">
+<!-- Mobile Screen Container -->
+<div class="w-full max-w-md mx-auto relative min-h-screen flex flex-col">
+<!-- Top Sticky Section: Header, Search & Filter Tabs -->
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-black/5 transition-all shadow-[0_1px_3px_rgba(0,0,0,0.03)]">
+<!-- Top Row: Title, Count & Toggle Icon -->
+<div class="flex items-center justify-between px-margin-mobile pt-5 pb-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#111111] text-[24px]">local_library</span>
+<h1 class="text-headline-lg-mobile font-headline-lg-mobile text-[#111111]">Kitaplığım</h1>
+</div>
+<p class="text-label-md font-label-md text-[#666666] mt-0.5">42 kitap</p>
+</div>
+<!-- View Toggle Action -->
+<button aria-label="Görünüm değiştir" class="w-10 h-10 rounded-xl bg-[#f4f4f5] flex items-center justify-center text-[#333333] border border-black/5 active:scale-95 transition-transform hover:text-black hover:bg-[#e4e4e7] shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">view_agenda</span>
+</button>
+</div>
+<!-- Search Bar -->
+<div class="px-margin-mobile pb-3">
+<div class="relative flex items-center w-full h-12 bg-[#f4f4f5] rounded-[14px] border border-black/5 focus-within:border-black focus-within:ring-1 focus-within:ring-black transition-all duration-200 shadow-inner">
+<div class="pl-3.5 pr-2 flex items-center pointer-events-none text-[#71717a]">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full bg-transparent border-none text-[#111111] placeholder:text-[#8e8e93] text-body-md font-body-md focus:outline-none focus:ring-0 px-0" placeholder="Kitap veya yazar ara..." type="text">
+<button aria-label="Filtrele" class="pr-3.5 pl-2 flex items-center text-[#71717a] hover:text-[#111111] active:scale-95 transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Filter Pills Tabs (Horizontal Scrollable) -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar px-margin-mobile pb-3 pt-1">
+<!-- Active Pill -->
+<button class="shrink-0 h-9 px-4 rounded-full bg-black text-white border border-black text-label-sm font-label-sm shadow-sm flex items-center justify-center">
+          Tümü (42)
+        </button>
+<!-- Inactive Pills -->
+<button class="shrink-0 h-9 px-4 rounded-full bg-[#f4f4f5] text-[#52525b] border border-black/5 text-label-sm font-label-sm hover:text-[#111111] hover:bg-[#e4e4e7] active:scale-95 transition-all">
+          Şu An Okunanlar (3)
+        </button>
+<button class="shrink-0 h-9 px-4 rounded-full bg-[#f4f4f5] text-[#52525b] border border-black/5 text-label-sm font-label-sm hover:text-[#111111] hover:bg-[#e4e4e7] active:scale-95 transition-all">
+          Tamamlananlar (31)
+        </button>
+<button class="shrink-0 h-9 px-4 rounded-full bg-[#f4f4f5] text-[#52525b] border border-black/5 text-label-sm font-label-sm hover:text-[#111111] hover:bg-[#e4e4e7] active:scale-95 transition-all">
+          Okunacaklar (8)
+        </button>
+</div>
+</header>
+<!-- Main Content Area: 2-Column Book Grid -->
+<main class="flex-1 px-margin-mobile pt-3 pb-8 z-10">
+<div class="grid grid-cols-2 gap-gutter-mobile">
+<!-- Card 1: Dune -->
+<article class="group bg-surface-container rounded-2xl p-3 border border-white/10 hover:border-white/25 transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.4)] flex flex-col justify-between">
+<div class="space-y-2.5">
+<!-- 3:4 Aspect Ratio Cover -->
+<div class="relative w-full aspect-[3/4] rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.6)] bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Intense sci-fi celestial book cover art for Dune depicting colossal desert sand dunes under an obsidian cosmic sky. An astronomical eclipse shimmers with faint violet auroral rings, matching the midnight literary sanctum palette. The scene invokes deep mystery with rich velvet blacks, deep spectral purples, and ultra-fine atmospheric starlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDh7tb1rUefg0enfRrsogc0X-BIJkKJocI2wuNp4Ub6IjG0fRDDs2n-zhASDkaJbWUe_c1zV78f7NvgOw3v-NmRSWvDMiUbsJ5ZrcknpxBypPrzyW1iePvMN9uje1NEd93odGq6_cABLE7yt81hGy0Ti6xlr_yk3mvWpWT0tQ_Ht5kvhFrCIturp2VW1xnCgVPh4lEee81CzkcbLLicRz2_MRKLZ_ntfzfF1NodwrqxYPsVX1RQ0f_HAIm2c2CdMvTMPxk2PT1nYd-">
+<!-- Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/20"></div>
+<!-- Progress Tag -->
+<div class="absolute bottom-2 left-2 right-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-black/85 backdrop-blur-md text-white border border-white/20">
+                  %64 Okundu
+                </span>
+</div>
+</div>
+<!-- Metadata -->
+<div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface line-clamp-1 leading-tight group-hover:text-white transition-colors">
+                Dune
+              </h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-1 mt-0.5">
+                Frank Herbert
+              </p>
+</div>
+</div>
+<!-- Star Rating -->
+<div class="flex items-center justify-between pt-2 mt-2 border-t border-white/5">
+<div class="flex items-center gap-0.5 text-tertiary">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface">5.0</span>
+</div>
+</article>
+<!-- Card 2: Simyacı -->
+<article class="group bg-surface-container rounded-2xl p-3 border border-white/10 hover:border-white/25 transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.4)] flex flex-col justify-between">
+<div class="space-y-2.5">
+<!-- Cover -->
+<div class="relative w-full aspect-[3/4] rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.6)] bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Warm amber and desert gold conceptual book cover illustration for The Alchemist. An enigmatic solitary wanderer gazes toward Egyptian pyramids silhouetted under an ethereal night sky lit by a golden crescent moon. The aesthetic fuses midnight minimalism with goldenrod luminescence, capturing philosophical introspective grandeur." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABVHbW5tUWCEPxmbclU6ChPoWsqCxmbD2VqeorjGmfGNJ1Qr0KOE_HfWMPhl3l-V_8EdegHy5U6GN77KoZt-v5bIAvTrbKUZONLJgvgnp7X3eeLLc0LfwZbcOFwtkNnFFQHrNVA-Eb2_wxTNp3Fmngtw4OoSyHrd5ZbWhbrAN69nsCGAuhtmOJKLiufQUVxpuEYiko2PLrmCE_9kndq3sX9PSanB1eUXG6tBF9h3y2vTep-l9rFGc6NOBqgjgxhwxbGLXVpQIcpnWW">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/20"></div>
+<div class="absolute bottom-2 left-2 right-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-black/85 backdrop-blur-md text-white border border-white/20">
+                  Tamamlandı
+                </span>
+</div>
+</div>
+<!-- Metadata -->
+<div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface line-clamp-1 leading-tight group-hover:text-white transition-colors">
+                Simyacı
+              </h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-1 mt-0.5">
+                Paulo Coelho
+              </p>
+</div>
+</div>
+<!-- Star Rating -->
+<div class="flex items-center justify-between pt-2 mt-2 border-t border-white/5">
+<div class="flex items-center gap-0.5 text-tertiary">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface">4.8</span>
+</div>
+</article>
+<!-- Card 3: Körlük -->
+<article class="group bg-surface-container rounded-2xl p-3 border border-white/10 hover:border-white/25 transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.4)] flex flex-col justify-between">
+<div class="space-y-2.5">
+<!-- Cover -->
+<div class="relative w-full aspect-[3/4] rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.6)] bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Moody minimalist book cover art for Blindness featuring deep teal and dark emerald textures. A subtle abstract eye form dissolves into fractured shards of crystalline white light against a shadowy obsidian void. The visual mood evokes psychological depth and late-night literary solemnity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4R260s1gG3ZpgXol7-LJvidw9ZXOGSxnfBobzQ8DPm8FOYn0gdilmtkCwOqm_lhUiJkUTzIyJGsoHmcyVt27PDYQ2kxGf_-Q6LEHjkvOiFadjuBpJD0EvKZpkhAk4wJ24_QtHGBsR3N4imock5PEZVtSrnQ00YTaVoCT-y2AN3M1JZUnu46-5q4Q-KEafzJb75_eCI9syAF4f8ReIOTiFY1NgQbyUIbvZ0d8pEFCs1KEs6crau-lJ78KH32qJs3lDJhGvMOjrcGk0">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/20"></div>
+<div class="absolute bottom-2 left-2 right-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-black/85 backdrop-blur-md text-white border border-white/20">
+                  Tamamlandı
+                </span>
+</div>
+</div>
+<!-- Metadata -->
+<div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface line-clamp-1 leading-tight group-hover:text-white transition-colors">
+                Körlük
+              </h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-1 mt-0.5">
+                José Saramago
+              </p>
+</div>
+</div>
+<!-- Star Rating -->
+<div class="flex items-center justify-between pt-2 mt-2 border-t border-white/5">
+<div class="flex items-center gap-0.5 text-tertiary">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface">4.9</span>
+</div>
+</article>
+<!-- Card 4: 1984 -->
+<article class="group bg-surface-container rounded-2xl p-3 border border-white/10 hover:border-white/25 transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.4)] flex flex-col justify-between">
+<div class="space-y-2.5">
+<!-- Cover -->
+<div class="relative w-full aspect-[3/4] rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.6)] bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Dystopian noir book cover design for 1984 featuring brutalist monolithic architecture beneath a deep crimson and slate gray twilight sky. A single piercing geometric surveillance eye watches from an imposing dark concrete facade, bathed in cinematic rim lighting and dramatic shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaQO69gS4U6dx5AzCoZgLA7oYvzeJSjullN31cY1ZmvWjh2CeBB4gmWnscsL-ojiB_y1wuWC_W3ya-X_lwQO2VW5NL3ebzs8FvqRqzjziQu56Qx2x9GTDfcCgegqqw0IUebeL-oku4_mVqP-d-oykB8IgGojvB5QSEl39etUjQvOF-VWj3EGfLO1wug5zD1IDiWvVvWmnVvBTet9oM4IIXue4AdUqqspgZ_IBO7LCwoWfvGp75IvdlwWdcnvcbXi8DCcmDbAvNDj5n">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/20"></div>
+<div class="absolute bottom-2 left-2 right-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-black/85 backdrop-blur-md text-white border border-white/20">
+                  Tamamlandı
+                </span>
+</div>
+</div>
+<!-- Metadata -->
+<div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface line-clamp-1 leading-tight group-hover:text-white transition-colors">
+                1984
+              </h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-1 mt-0.5">
+                George Orwell
+              </p>
+</div>
+</div>
+<!-- Star Rating -->
+<div class="flex items-center justify-between pt-2 mt-2 border-t border-white/5">
+<div class="flex items-center gap-0.5 text-tertiary">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface">5.0</span>
+</div>
+</article>
+<!-- Card 5: Cesur Yeni Dünya -->
+<article class="group bg-surface-container rounded-2xl p-3 border border-white/10 hover:border-white/25 transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.4)] flex flex-col justify-between">
+<div class="space-y-2.5">
+<!-- Cover -->
+<div class="relative w-full aspect-[3/4] rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.6)] bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Futuristic speculative book cover for Brave New World with glowing electric violet and neon lavender chromatic gradients. Abstract synthetic test tubes and mechanical floral silhouettes emerge from a glossy obsidian reflective glass background, creating a high-end luxury dark-mode visual." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYIoknYt7dMj9pSaJGJmELItnQ_NPirbxJ6qgJL2XrGUHvAuBmfDKZ0mgrfoB93EY24Mnkuul4ou1VTOCeXkaCpuuMte3u4Imf6CRfw4Mtaw6Is452ipLxT8yp2mlN2rfYFlxNB5UeNE6nZ9s7tuoPHCclA5A72n3Xl5MGMoo0h9lAp5W68WJ5yl0JMWgVkRemnoDn8Jb7NgVjXveJyXZA-qBJUD7_lLJoQ5EcxH0M44-LddUFn3wA2r4epzIGDY4wyYm4Rcgs9XP0">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/20"></div>
+<div class="absolute bottom-2 left-2 right-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-black/85 backdrop-blur-md text-white border border-white/20">
+                  Okunacak
+                </span>
+</div>
+</div>
+<!-- Metadata -->
+<div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface line-clamp-1 leading-tight group-hover:text-white transition-colors">
+                Cesur Yeni Dünya
+              </h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-1 mt-0.5">
+                Aldous Huxley
+              </p>
+</div>
+</div>
+<!-- Star Rating -->
+<div class="flex items-center justify-between pt-2 mt-2 border-t border-white/5">
+<div class="flex items-center gap-0.5 text-tertiary">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px] opacity-30" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface">4.6</span>
+</div>
+</article>
+<!-- Card 6: Bülbülü Öldürmek -->
+<article class="group bg-surface-container rounded-2xl p-3 border border-white/10 hover:border-white/25 transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.4)] flex flex-col justify-between">
+<div class="space-y-2.5">
+<!-- Cover -->
+<div class="relative w-full aspect-[3/4] rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.6)] bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Editorial vintage book cover illustration for To Kill a Mockingbird featuring antique bronze, burnished gold, and deep charcoal tones. A solitary mockingbird perches upon tangled oak branches bathed in soft twilight moonbeams, invoking themes of quiet courage and nocturnal intimacy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMpsrm0imvuJqYS4-oqNKtLcHrCAWFIneYOacWLw0m-efruPsHM0xw-j1vxgjgronFAPxMx1nkFUDoXI06YBvvtvVzSjWrtBoxbF5sgfL-E2fE8eGqOV3cpeN7vrsvB08LBm-AzX0W62RDKfiXBxFLKuWWuMRtkd5ak2cw1nLTaQN6WNK77AVC_vhV3DB-L4s2hTGCthu8v9_O252-dIMeuxl3ktF4Up4FSHwyc3WGt1xeVYWQMeok6xaSuxnBPJfcmoP5QhJR7T27">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/20"></div>
+<div class="absolute bottom-2 left-2 right-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-black/85 backdrop-blur-md text-white border border-white/20">
+                  %20 Okundu
+                </span>
+</div>
+</div>
+<!-- Metadata -->
+<div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface line-clamp-1 leading-tight group-hover:text-white transition-colors">
+                Bülbülü Öldürmek
+              </h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-1 mt-0.5">
+                Harper Lee
+              </p>
+</div>
+</div>
+<!-- Star Rating -->
+<div class="flex items-center justify-between pt-2 mt-2 border-t border-white/5">
+<div class="flex items-center gap-0.5 text-tertiary">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface">4.9</span>
+</div>
+</article>
+</div>
+</main>
+<!-- Floating Action Button (Kitap Ekle - Solid Black with Subtle Crisp White Border) -->
+<div class="fixed bottom-20 right-5 z-40 max-w-md pointer-events-auto">
+<button class="flex items-center gap-2 h-[52px] px-5 rounded-2xl bg-black text-white font-label-lg text-label-lg border border-black shadow-[0_10px_25px_rgba(0,0,0,0.25)] hover:bg-neutral-900 active:scale-95 transition-all duration-200" type="button">
+<span class="material-symbols-outlined text-[22px]">document_scanner</span>
+<span class="">Kitap Ekle</span>
+</button>
+</div>
+<!-- Bottom Navigation Bar (Shared Component Anchor) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter-mobile py-2.5 bg-white/95 backdrop-blur-2xl border-t border-black/5 shadow-[0_-4px_20px_rgba(0,0,0,0.06)]">
+<div class="w-full max-w-md mx-auto flex justify-around items-center">
+<!-- Tab 1: Kitaplık (Active) -->
+<a class="flex flex-col items-center justify-center gap-1 text-[#111111] font-bold relative after:content-[''] after:w-1.5 after:h-1.5 after:rounded-full after:bg-[#111111] after:mt-0.5 active:scale-90 transition-transform duration-150 ease-out" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="text-label-sm font-label-sm tracking-wide">Kitaplık</span>
+</a>
+<!-- Tab 2: İstatistikler -->
+<a class="flex flex-col items-center justify-center gap-1 text-[#71717a] hover:text-[#111111] transition-colors duration-200 active:scale-90 transition-transform duration-150 ease-out" href="#">
+<span class="material-symbols-outlined text-[24px]">insights</span>
+<span class="text-label-sm font-label-sm tracking-wide">İstatistikler</span>
+</a>
+<!-- Tab 3: Keşfet -->
+<a class="flex flex-col items-center justify-center gap-1 text-[#71717a] hover:text-[#111111] transition-colors duration-200 active:scale-90 transition-transform duration-150 ease-out" href="#">
+<span class="material-symbols-outlined text-[24px]">explore</span>
+<span class="text-label-sm font-label-sm tracking-wide">Keşfet</span>
+</a>
+<!-- Tab 4: Profil -->
+<a class="flex flex-col items-center justify-center gap-1 text-[#71717a] hover:text-[#111111] transition-colors duration-200 active:scale-90 transition-transform duration-150 ease-out" href="#">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="text-label-sm font-label-sm tracking-wide">Profil</span>
+</a>
+</div>
+</nav>
+</div>
+
+
+</body></html>
